@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Section -->
+   <header>
+        <div class="top-description">
+            <div class="intro-paragraphs">
+                <p>Brent Daniel Lim is this guys name and welcome to his portfolio website. He is an I.T student who loves designing, craves for learning and opportunities, and loves working with people, who share the same interest and passion for designing and programming as him. Brent wakes up excited about the thought of creating and building new things everyday. If you find this guy interesting, please get in touch.</p>
+                <p>Currently using and learning canva, figma, photpea. Mostly taught by his university, but he is a self taught typa guy. He loves being proficient and creating systems that make working on his goals much easier. For programming he use vscode, dev-c. He currently has C, Html, Css, Javascript, Python at his disposal. Mastery level is mid tier, this guys’ still a first year student after all.</p>
+            </div>
+        </div>
+        <div class="top-left-icon">
+            <img id="cycling-image" src="icon_pics/icon_1.png" alt="Cycling Icon">
+        </div>
+        <div class="top-right-disc" id="disc">
+            <div class="half-disc"></div>
+        </div>
+    </header>
+
+    <!-- Music Selection Modal -->
+    <div id="music-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Select Music</h2>
+            <audio controls id="music-player">
+                <source src="path/to/your/music1.mp3" type="audio/mpeg">
+                <source src="path/to/your/music2.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <p>Choose a track to play while scrolling.</p>
+        </div>
+    </div>
+
+    <!-- Main Columns -->
+    <main>
+        <div class="columns">
+            <!-- About Column -->
+            <div class="column">
+                <h2>About</h2>
+                <div class="box" data-content="Enter details here for About Box 1">
+                    <video class="media" muted loop>
+                        <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+                    </video>
+                    <h3>1</h3>
+                </div>
+                <div class="box" data-content="Enter details here for About Box 2">
+                    <img class="media" src="about_pics/Dan_About.png" alt="About Box 2">
+                    <h3>me :]</h3>
+                </div>
+                <div class="box" data-content="Enter details here for About Box 3">
+                    <video class="media" muted loop>
+                        <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4" type="video/mp4">
+                    </video>
+                    <h3>3</h3>
+                </div>
+            </div>
+
+            <!-- Projects Column -->
+            <div class="column">
+                <h2>Projects</h2>
+                <div class="box" data-content="Enter details here for Projects Box 1">
+                    <img class="media" src="projects_pics/pic_1.png" alt="Projects Box 1">
+                    <h3>Poster Design</h3>
+                </div>
+                <div class="box" data-content="Enter details here for Projects Box 2">
+                    <video class="media" muted loop>
+                        <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_5mb.mp4" type="video/mp4">
+                    </video>
+                    <h3>Website Projects</h3>
+                </div>
+                <div class="box" data-content="Enter details here for Projects Box 3">
+                    <img class="media" src="projects_pics/pic_2.png" alt="Projects Box 3">
+                    <h3>Academic Project</h3>
+                </div>
+            </div>
+
+            <!-- Work Column -->
+            <div class="column">
+                <h2>Work</h2>
+                <div class="box" data-content="Enter details here for Work Box 1">
+                    <img class="media" src="work_pics/pic_1.png" alt="Work Box 1"> <!-- https://picsum.photos/300/200?random=5 -->
+                    <h3>Still a Student :]</h3>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Expanded Box Modal -->
+    <div id="box-modal" class="modal">
+        <div class="modal-content full-screen">
+            <span class="close">&times;</span>
+            <div id="box-details"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="socials">
+            <a href="https://github.com/brentdaniellim" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"></a>
+            <a href="https://instagram.com/arkh.lios/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"></a>
+            <a href="mailto:daniellimatyahoo@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email"></a>
+        </div>
+        <div class="footer-text">
+            <p>Lets build something, and make every pixel count.</p>
+            <p>daniellimatyahoo@gmail.com</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
