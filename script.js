@@ -1,5 +1,6 @@
 // Audio player
 let currentAudio = null;
+let currentTrackSrc = null;
 const vinylRecord = document.getElementById('vinylRecord');
 const musicPlaylist = document.getElementById('musicPlaylist');
 const playlistItems = document.querySelectorAll('.playlist-item');
@@ -12,13 +13,27 @@ playlistItems.forEach(item => {
     item.addEventListener('click', () => {
         const src = item.dataset.src;
         
-        if (currentAudio) {
-            currentAudio.pause();
-            document.querySelectorAll('.playlist-item').forEach(i => i.classList.remove('playing'));
-        }
-
-        if (!currentAudio || currentAudio.src !== src) {
+        // If clicking the currently playing track, pause/resume it
+        if (currentAudio && currentTrackSrc === src) {
+            if (currentAudio.paused) {
+                currentAudio.play();
+                item.classList.add('playing');
+                vinylRecord.classList.add('playing');
+            } else {
+                currentAudio.pause();
+                item.classList.remove('playing');
+                vinylRecord.classList.remove('playing');
+            }
+        } else {
+            // Stop current audio and play new one
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+                document.querySelectorAll('.playlist-item').forEach(i => i.classList.remove('playing'));
+            }
+            
             currentAudio = new Audio(src);
+            currentTrackSrc = src;
             currentAudio.play();
             item.classList.add('playing');
             vinylRecord.classList.add('playing');
@@ -26,9 +41,8 @@ playlistItems.forEach(item => {
             currentAudio.onended = () => {
                 vinylRecord.classList.remove('playing');
                 item.classList.remove('playing');
+                currentTrackSrc = null;
             };
-        } else {
-            vinylRecord.classList.remove('playing');
         }
     });
 });
