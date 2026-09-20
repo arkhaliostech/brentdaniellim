@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Lim - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="header-left">
+                <h1>Daniel Lim</h1>
+                <p>Website Portfolio</p>
+            </div>
+            <div class="header-right">
+                <h2>Student, Designer & Programmer</h2>
+                <p>Cebu, Philippines</p>
+            </div>
+        </div>
+    </header>
+
+<!-- Sticky Navigation BEFORE
+    <nav class="sticky-nav" id="stickyNav">
+        <div class="nav-content">
+            <div class="nav-brand">Daniel Lim</div>
+            <div class="nav-links">
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#work" class="nav-link" data-section="work">Work</a>
+                <a href="#playground" class="nav-link" data-section="playground">Playground</a>
+            </div>
+        </div>
+    </nav>-->
+
+    <!-- Sticky Navigation AFTER -->
+<nav class="sticky-nav" id="stickyNav">
+    <div class="nav-content">
+        <div class="nav-brand" id="navBrand">Daniel Lim — About</div>
+        <div class="nav-links">
+        <a href="#work" class="nav-link" data-section="work">Work / Creations</a>
+        <a href="#playground" class="nav-link" data-section="playground">Playground</a>         
+    </div>
+    </div>
+    
+    
+</nav>
+
+
+
+    <!-- Vinyl Record Player -->
+    <div class="vinyl-player">
+        <div class="vinyl-record" id="vinylRecord">
+            <div class="vinyl-center"></div>
+            <svg class="vinyl-text" viewBox="0 0 120 120">
+                <defs>
+                    <path id="circle" d="M 60, 60 m -45, 0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"/>
+                </defs>
+                <text>
+                    <textPath href="#circle">
+                        MUSIC • PLAYLIST • MUSIC • PLAYLIST •
+                    </textPath>
+                </text>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Music Playlist -->
+    <div class="music-playlist" id="musicPlaylist">
+        <div class="playlist-item" data-src="music/track1.2.mp3">Track 1, Magnus Haven - Imahe</div>
+        <div class="playlist-item" data-src="music/track2.mp3">Track 2, Shoreditch - Vard</div>
+        <div class="playlist-item" data-src="music/track3.mp3">Track 3, No Reservations - Jesse Barrera</div>
+        <div class="playlist-item" data-src="music/track4.mp3">Track 4, Harness Your Hopes - Pavement</div>
+        
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <div class="content-grid">
+            <!-- About Column -->
+            <div class="column" id="about">
+                <h3></h3>
+                <div class="work-item" data-section="about" data-description="This is my story. I'm a passionate designer and developer based in Philippines. I love creating meaningful experiences through design and code.
+                <br><br> I am 19 years old, studying in one of the top technological universities in the country. My first language is C and currently working towards other ones, like reactJS, kotlin and my mastery of html, css, and javascript.
+                I play video games on the side, strategic, team based, and creative. Minecraft, Terraria, Leauge of Legends, Valorant and Apex Legends are some of the games I play. ">
+                    <div class="work-item-header">
+                        <h4>My Story</h4>
+                        <span class="year">18-19</span>
+                    </div>
+                    <p class="tags">Designer, Developer, Student</p>
+                    <div class="work-item-media">
+                        <img src="about_pics/Dan_About.png" alt="About">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Work Column -->
+            <div class="column" id="work">
+                <h3></h3>
+                <div class="work-item" data-section="work" data-description="Currently pursuing my studies while working on various design and development projects. Learning new technologies and design principles every day.">
+                    <div class="work-item-header">
+                        <h4>Still A Student :]</h4>
+                        <span class="year">19</span>
+                    </div>
+                    <p class="tags">I.T Student</p>
+                    <div class="work-item-media">
+                        <img src="work_pics/topspfp_Daniel.jpeg" alt="Phone">
+                    </div>
+                </div>
+               <div class="work-item" data-section="work" data-description="Worked on multiple web design projects using Figma. Created user interfaces and interactive prototypes for school and personal projects.">
+                    <div class="work-item-header">
+                        <h4>UI / UX</h4>
+                        <span class="year">19</span>
+                    </div>
+                    <p class="tags">Figma Website</p>
+                    <div class="work-item-media">
+                        <div class="work-item-media video-preview">
+                            <video 
+                                class="project-video"
+                                src="playground_pics/Figma_record.mp4"
+                                poster="playground_pics/figma_prototype.png"
+                                muted
+                                loop
+                                playsinline>
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" data-section="work" data-description="Worked on multiple web design projects using Figma. Created user interfaces and interactive prototypes for school and personal projects.">
+                    <div class="work-item-header">
+                        <h4>Figma</h4>
+                        <span class="year">18-19</span>
+                    </div>
+                    <p class="tags">Web-Mobile UI / UX Prototyping</p>
+                    <div class="work-item-media">
+                        <img src="work_pics/Figma_Design.png" alt="Figma">
+                    </div>
+                </div>
+                <div class="work-item" data-section="work" data-description="Created eye-catching poster designs. Focused on typography, color theory, and visual hierarchy to communicate messages effectively.">
+                    <div class="work-item-header">
+                        <h4>Poster Designer</h4>
+                        <span class="year">18-19</span>
+                    </div>
+                    <p class="tags">Design Concept, Typography, Interface</p>
+                    <div class="work-item-media">
+                        <img src="work_pics/Poster_Design.png" alt="Poster">
+                    </div>
+                </div>
+                <!-- 
+                <div class="work-item" data-section="work" data-description="More projects coming soon. Stay tuned for updates!">
+                    <div class="work-item-header">
+                        <h4>N/A</h4>
+                        <span class="year">1</span>
+                    </div>
+                    <p class="tags">n/a</p>
+                    <div class="work-item-media">
+                        <img src="work_pics/cat3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="work-item" data-section="work" data-description="Under Construction.">
+                    <div class="work-item-header">
+                        <h4>N/A</h4>
+                        <span class="year">1</span>
+                    </div>
+                    <p class="tags">n/a</p>
+                    <div class="work-item-media">
+                        <img src="work_pics/cat1.png" alt="">
+                    </div>
+                </div>
+                <div class="work-item" data-section="work" data-description="More projects coming soon. Stay tuned for updates!">
+                    <div class="work-item-header">
+                        <h4>N/A</h4>
+                        <span class="year">0</span>
+                    </div>
+                    <p class="tags">n/a</p>
+                    <div class="work-item-media">
+                        <img src="work_pics/cat2.png" alt="">
+                    </div>
+                </div> Footer -->
+            </div> 
+
+            <!-- Playground Column -->
+            <div class="column" id="playground">
+                <h3></h3>
+                 <div class="work-item" data-section="playground" data-description="This is a productivity Pomo-Focus Website for you to use while studying or doing tasks. Works in any device.">
+                    <div class="work-item-header">
+                        <h4>Sōzō-sei</h4>
+                        <span class="year">19</span>
+                    </div>
+                    <p class="tags">Pomodoro & Focus Website</p>
+                    <div class="work-item-media">
+                        <img src="work_pics/Pomo_suchu.png" alt="Phone">
+                    </div>
+                    <p> <a href=" https://arkhaliostech.github.io/Pomo-Suchu/" target="_blank" style="color: white;font-weight: bold; text-decoration:none;"> Visit the Pomo-Focus Website </a> </p>
+                </div>
+                
+                <div class="work-item" data-section="playground" data-description="Fun side projects exploring typography, brand and design experiences. No rules, just creativity! I started using Canva at the age of 16.">
+                    <div class="work-item-header">
+                        <h4>Canva</h4>
+                        <span class="year">16-19</span>
+                    </div>
+                    <p class="tags">Posters & Brand Design, Short Animation</p>
+                    <div class="work-item-media">
+                        <img src="playground_pics/pic_2.png" alt="Playground">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-col">
+                <p>Last updated: January 14, 2026</p>
+            </div>
+            <div class="footer-col">
+                <div class="footer-links">
+                    <a href="https://github.com/arkhaliostech" target="_blank">GitHub</a>
+                    <a href="https://instagram.com/arkh.lios" target="_blank">Instagram</a>
+                    <a href="mailto:daniellimatyahoo@gmail.com">Gmail</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Let's build something,<br>and make every pixel count.</h4>
+                <a href="mailto:daniellimatyahoo@gmail.com">daniellimatyahoo@gmail.com</a>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-close" id="modalClose">×</div>
+        <div class="modal-content" id="modalContent"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
