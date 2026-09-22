@@ -515,6 +515,18 @@ footer {
     opacity: 0.8;
     margin-bottom: 20px;
 }
+.video-preview {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.video-poster {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 .project-video {
     width: 100%;
@@ -523,4 +535,5 @@ footer {
     object-fit: cover;
     cursor: pointer;
 }
+
 

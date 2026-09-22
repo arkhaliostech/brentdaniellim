@@ -214,16 +214,22 @@ document.addEventListener('click', (e) => {
     }
 });
 
-const videoPreview = document.querySelector(".video-preview");
-const previewVideo = videoPreview.querySelector(".project-video");
+const videoPreviews = document.querySelectorAll(".video-preview");
 
-videoPreview.addEventListener("mouseenter", () => {
-    previewVideo.play();
-    poster.style.opacity = "0";
-});
+videoPreviews.forEach((videoPreview) => {
 
-videoPreview.addEventListener("mouseleave", () => {
-    previewVideo.pause();
-    previewVideo.currentTime = 0;
-    poster.style.opacity = "1";
+    const previewVideo = videoPreview.querySelector(".project-video");
+    const poster = videoPreview.querySelector(".video-poster");
+
+    videoPreview.addEventListener("mouseenter", () => {
+        previewVideo.play();
+        poster.style.opacity = "0";
+    });
+
+    videoPreview.addEventListener("mouseleave", () => {
+        previewVideo.pause();
+        previewVideo.currentTime = 0;
+        poster.style.opacity = "1";
+    });
+
 });
